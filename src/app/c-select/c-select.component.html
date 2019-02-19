@@ -1,0 +1,36 @@
+<app-layout>
+  <div id="layout">
+    <form #chSelectForm="ngForm" (ngSubmit)="createEntry(chSelectForm.value)">
+      <h2>Select your character</h2>
+      <div id="name">
+        <input type="text" placeholder="Enter player name" ngModel name="name" required>
+      </div>
+      <div id="character-wrap">
+        <div class="panel" [hidden]="hideCss">
+          <h3>
+            CSS3
+          </h3>
+          <div class="avatar" id="avt-css" (click)="chSelect('css')"></div>
+        </div>
+        <div class="panel" [hidden]="hideHtml">
+          <h3>
+            HTML5
+          </h3>
+          <div class="avatar" id="avt-html" (click)="chSelect('html')"></div>
+        </div>
+        <div class="panel" [hidden]="hideJs">
+          <h3>
+            JavaScript
+          </h3>
+          <div class="avatar" id="avt-js" (click)="chSelect('js')"></div>
+        </div>
+      </div>
+      <div id="btn-wrap">
+        <button type="submit" id="begin-btn" [disabled]="!characterSelected">Begin the game</button>
+        <button id="swap-ch" (click)="swapCh()" [hidden]="!characterSelected">
+          Change character
+        </button>
+      </div>
+    </form>
+  </div>
+</app-layout>

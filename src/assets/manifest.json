@@ -1,0 +1,10 @@
+{
+    "short_name": "PI",
+    "name": "Personal Interest",
+    "start_url": "/?source=pwa",
+    "background_color": "#3367D6",
+    "display":      "standalone", /* Could be "fullscreen", "standalone", "minimal-ui", or "browser" */
+    "orientation":  "landscape", /* Could be "landscape" or "portrait" */
+    "scope": "/",
+    "theme_color": "#3367D6"
+  }

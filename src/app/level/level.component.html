@@ -1,0 +1,19 @@
+<app-layout>
+    <div id="layout" (keydown)="onKeydown($event)" *ngFor="let player of players | async">
+        <div class="avatar-wrap" *ngIf="player.selection == 'css'">
+            <div id="css-closed" class="avatar" [hidden]="avatarState"></div>
+            <div id="css-open" class="avatar-jump" [hidden]="!avatarState"></div>
+        </div>
+        <div class="avatar-wrap" *ngIf="player.selection == 'html'">
+            <div id="html-closed" class="avatar" [hidden]="avatarState"></div>
+            <div id="html-open" class="avatar-jump" [hidden]="!avatarState"></div>
+        </div>
+        <div class="avatar-wrap" *ngIf="player.selection == 'js'">
+            <div id="js-closed" class="avatar" [hidden]="avatarState"></div>
+            <div id="js-open" class="avatar-jump" [hidden]="!avatarState"></div>
+        </div>
+        <!-- <div class="board">
+            <app-gameboard></app-gameboard>
+        </div> -->
+    </div>
+</app-layout>

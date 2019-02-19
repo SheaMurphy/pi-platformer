@@ -1,0 +1,30 @@
+<app-layout>
+  <div *ngIf="character.health === 0">
+    <div class="modal-blocker"></div>
+    <div class="game-over">
+      <div class="game-over-image"></div>
+      <div class="button-container">
+        <button (click)="refresh()">Retry level</button>
+        <button routerLink="/c-select">Character select</button>
+      </div>
+    </div>
+  </div>
+  <div id="board">
+    <svg viewBox="0 0 150 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="150" height="100" fill="transparent" stroke="grey" stroke-width="0" fill-opacity="0%" />
+      <g *ngFor="let boardRow of board.grid; let row = index">
+        <g *ngFor="let block of boardRow; let col = index">
+          <rect [attr.x]="col * 10" [attr.y]="row * 10" width="10" height="10" [attr.fill]="block.color" stroke="black"
+            stroke-width="0" />
+        </g>
+      </g>
+      <image *ngIf="character.isVisible" [attr.xlink:href]="character.image" [attr.x]="character.position.x * 10"
+        [attr.y]="character.position.y * 10" [attr.width]="10" [attr.height]="10" fill="blue" stroke="grey"
+        stroke-width="0" />
+    </svg>
+  </div>
+  <div class="player-status">
+    <h3> HEALTH: </h3>
+    <div class="health-bar" [ngStyle]="{'width': character.health + '%'}"></div>
+  </div>
+</app-layout>

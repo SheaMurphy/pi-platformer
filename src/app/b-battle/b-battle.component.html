@@ -1,0 +1,28 @@
+<app-layout>
+  <div class="modal" [hidden]="endstate != 'player end'">
+    <h1>Player wins</h1>
+  </div>
+  <div class="modal" [hidden]="endstate != 'comp end'">
+    <h1>GAME OVER</h1>
+  </div>
+  <div id="blocker" [hidden]="endstate == 'unfinished'">
+  </div>
+  <div id="layout">
+    <div id="player-panel">
+      <div id="player-avt" (click)="reduceHealth('player')"></div>
+      <div class="progress">
+        <h3>Health</h3>
+        <div class="progress-bar" [ngStyle]="{'width': playerHealth + '%'}"></div>
+        {{ playerHealth }}
+      </div>
+    </div>
+    <div id="comp-panel">
+      <div id="comp-avt" (click)="reduceHealth('comp')"></div>
+      <div class="progress">
+        <h3>Health</h3>
+        <div class="progress-bar" [ngStyle]="{'width': compHealth + '%'}"></div>
+        {{ compHealth }}
+      </div>
+    </div>
+  </div>
+</app-layout>

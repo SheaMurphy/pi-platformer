@@ -1,0 +1,152 @@
+#layout {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    /* display: flex;
+    flex-direction: row; */
+}
+
+h2 { 
+    text-align: center;
+    margin: 1em 0;
+}
+
+#character-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.panel {
+    width: 33%;
+    height: 50vh;
+    /* border: solid black 2px; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    border-radius: 10%;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.avatar {
+    height: 90%;
+    color: black;
+    width: 100%;
+    border-radius: 5%;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.avatar:hover {
+    cursor: pointer;
+}
+
+/* REMOVES THE RADIO STYLES */
+
+/* input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+} */
+
+input:hover {
+    cursor: pointer;
+}
+
+#avt-css {
+    background-image: url('../../assets/images/css3.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#avt-html {
+    background-image: url('../../assets/images/html5.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#avt-js {
+    background-image: url('../../assets/images/js.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#name {
+    text-align: center;
+}
+
+#name input {
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+button {
+    text-decoration: none;
+    border-radius: 20px;
+    /* border: 2px solid black; */
+    margin: 2vh;
+    background-color: transparent;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#swap-ch {
+    height: 7.5vh;
+    width: 10%;
+    font-size: 2vh;
+    border: none;
+    background-color: rgb(30, 30, 252);
+    color: white;
+    font-weight: bolder;
+}
+
+#swap-ch:hover {
+    background-color: rgb(77, 77, 255);
+    border: none;
+}
+
+#begin-btn {
+    font-size: 3vh;
+    height: 10vh;
+    width: 15%;
+    padding: 0.5em;
+    background-color: rgb(24, 184, 24);
+    color: white;
+    font-weight: bolder;
+    border: none;
+}
+
+#begin-btn:hover {
+    background-color: rgb(39, 235, 39);
+}
+
+/* button:hover {
+    cursor: pointer;
+    background-color: white;
+    opacity: 0.25;
+    border: 2px solid black;
+} */
+
+#btn-wrap {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

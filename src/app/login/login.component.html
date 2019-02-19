@@ -1,0 +1,23 @@
+<app-layout>
+  <div id="layout">
+    <h1>Login</h1>
+    <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
+      <div>
+        <div>
+          <label for="inputEmail">Email address</label>
+          <input ngModel type="email" class="form-control" id="inputEmail" name="email" placeholder="Email address"
+            required autofocus>
+        </div>
+        <div>
+          <label for="inputPassword">Password</label>
+          <input ngModel type="password" type="password" class="form-control" id="inputPassword" name="password"
+            placeholder="Password" required>
+          <label *ngIf="errorMessage">{{ errorMessage }}</label>
+          <!-- <p> {{ loginForm.value | json }} </p> -->
+        </div>
+      </div>
+      <button type="submit">Login</button>
+      <p>No account yet? <a routerLink="/register">Create an account</a></p>
+    </form>
+  </div>
+</app-layout>
